@@ -1,0 +1,13 @@
+RewriteEngine On
+#tao duong dan trang index.php
+RewriteRule ^trang-chu$ index.php
+#tao duong dan trang index.php?controller=news
+RewriteRule ^tin-tuc$ index.php?controller=news
+#tao duong dan trang index.php?controller=cart
+RewriteRule ^gio-hang$ index.php?controller=cart
+#tao duong dan trang index.php?controller=product&category_id=1
+RewriteRule ^san-pham/danh-muc/(.*)$ index.php?controller=product&category_id=$1
+#tao duong dan trang index.php?controller=product_detail&id=13
+RewriteRule ^san-pham/chi-tiet/(.*)$ index.php?controller=product_detail&id=$1
+#tao duong dan them moi san pham vao gio hang
+RewriteRule ^gio-hang/them-san-pham/(.*)$ index.php?controller=cart&act=add&id=$1

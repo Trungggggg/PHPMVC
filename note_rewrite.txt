@@ -1,0 +1,11 @@
+- Rewrite Url la cach viet lai duong dan than thien
+- Toan bo phan rewrite se duoc dat trong file co ten la .htaccess
+- Trong file .htaccess se co cac noi dung can chu y:
+	- De bat che do rewrite, ngay o dau trang phai co lenh: RewriteEngine On
+	- Ghi chu trong file .htaccess se su dung dau # o dau
+	- Kien truc lenh:
+	RewriteRule ^duongdancanrewrite$ duongdanthuc
+	- Truyen tham so len url
+	RewriteRule ^duongdan/(.*)-(.*)$ duongdanthuc?bien1=$1&bien2=$2
+	(.*): la tham so truyen tren url, bao gom tat cac ky tu
+	danh sach bien se tu $1 ... $n
